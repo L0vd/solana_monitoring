@@ -60,7 +60,7 @@ Set you name to identify yourself in grafana dashboard and check correctness of 
   data_format = "influx"
   data_type = "integer"
 ```
-Check if everything is ok
+Restart telegraf and check if everything is ok
 ```
 systemctl daemon-reload
 systemctl restart telegraf
