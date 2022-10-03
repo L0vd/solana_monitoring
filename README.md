@@ -51,9 +51,9 @@ Set you name to identify yourself in grafana dashboard and check correctness of 
 ...
 ...
 [[inputs.exec]]
-  commands = ["sudo su -c /root/haqq-monitoring/monitor.sh -s /bin/bash root"] # change path to your monitor.sh file and username to the one that validator runs at (e.g. root)
-  interval = "15s"
-  timeout = "5s"
+  commands = ["sudo su -c /root/solana/solanamonitoring/monitor.sh -s /bin/bash root"] # change path to your monitor.sh file and username to the one that validator runs at (e.g. root)
+  interval = "1m"
+  timeout = "1m"
   data_format = "influx"
   data_type = "integer"
 ```
