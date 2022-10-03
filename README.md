@@ -61,6 +61,7 @@ Set you name to identify yourself in grafana dashboard and check correctness of 
 ```
 Check if everything is ok
 ```
+systemctl daemon-reload
 systemctl restart telegraf
 journalctl -u telegraf -f
 ```
