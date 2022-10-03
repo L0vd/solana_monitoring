@@ -36,7 +36,6 @@ cd $HOME/solana
 git clone https://github.com/L0vd/solana_monitoring.git
 cd $HOME/solana/solana_monitoring
 chmod +x monitor.sh
-nano $HOME/solana/solana_monitoring/telegraf.conf
 ```
 
 Edit telegraf configuration and CHANGE YOUR MONIKER!
