@@ -44,6 +44,7 @@ sudo mv /etc/telegraf/telegraf.conf /etc/telegraf/telegraf.conf.orig
 sudo mv telegraf.conf /etc/telegraf/telegraf.conf
 sudo nano /etc/telegraf/telegraf.conf
 ```
+
 Set you name to identify yourself in grafana dashboard and check correctness of the path to your monitor.sh file and username your validator runs at. Correct these two settings in the configuration file:
 ```
 # Global Agent Configuration
@@ -52,9 +53,14 @@ Set you name to identify yourself in grafana dashboard and check correctness of 
 ...
 ...
 [[inputs.exec]]
-  commands = ["sudo su -c /root/solana/solanamonitoring/monitor.sh -s /bin/bash root"] # change path to your monitor.sh file and username to the one that validator runs at (e.g. root)
+  commands = ["sudo su -c /root/solana/solana_monitoring/monitor.sh -s /bin/bash root"] # change path to your monitor.sh file and username to the one that validator runs at (e.g. root)
   interval = "1m"
   timeout = "1m"
   data_format = "influx"
   data_type = "integer"
+```
+Check if everything is ok
+```
+systemctl restart telegraf
+journalctl -u telegraf -f
 ```
