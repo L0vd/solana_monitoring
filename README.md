@@ -4,7 +4,8 @@ Install telegraf
 ```
 sudo apt update
 sudo apt -y install curl jq bc
-
+```
+```
 # install telegraf
 sudo cat <<EOF | sudo tee /etc/apt/sources.list.d/influxdata.list
 deb https://repos.influxdata.com/ubuntu bionic stable
