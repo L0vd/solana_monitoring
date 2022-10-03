@@ -1,4 +1,5 @@
 # Solana monitoring by L0vd
+## Community dashboard by L0vd.com: [Dashboard link](http://213.246.45.190:3000/d/f2b2HcaGz/solana-community-validator-dashboard?orgId=1&refresh=1m)
 
 Install telegraf
 ```
